@@ -1,10 +1,44 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-    <meta charset="UTF-8">  
-    <title>Hello</title>  
-</head>  
-<body>  
-    <h1>Hello {{hello_words}}</h1>  
-</body>  
-</html>  
+<html>
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<h1>
+    <span class="label label-info">文章列表
+    </span>
+    <span class="label label-info">{{get_text_from_target}}
+    </span>
+
+
+</h1>
+<br><br><br>
+
+
+<div class="well" id="well">
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/react.js"></script>
+<script src="js/react-dom.js"></script>
+<script src="js/browser.min.js"></script>
+
+<script type="text/babel">
+    var Text = React.createClass({
+        render: function() {
+            return (
+                    <div className="a">
+                        获取远端的文章列表
+                    </div>
+            );
+        }
+    });
+
+    ReactDOM.render(
+            <Text/>,
+        document.getElementById('well')
+    );
+</script>
+</body>
+</html>

@@ -4,11 +4,11 @@ from django.shortcuts import render
 from django.shortcuts import render
 
 
-def hello_page(request):
+def get_text_from_target(request):
     return render(
         request,
         'index.html',
-        {'hello_words': request.GET.get('hello_words', "")}
+        {'get_text_from_target': request.GET.get('get_text_from_target', "")}
     )
 
 

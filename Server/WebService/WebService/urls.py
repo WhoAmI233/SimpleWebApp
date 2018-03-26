@@ -27,6 +27,6 @@ from WebApp import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.hello_page, name='hello_page'),
+    url(r'^$', views.get_text_from_target, name='get_text_from_target'),
 ]
 
